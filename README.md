@@ -1,5 +1,8 @@
 # Yandex TTS Web Application
 
+![image](https://github.com/user-attachments/assets/afa20c95-ee23-432b-8264-d4717ec82db6)
+
+
 ## Overview
 
 This repository contains a web-based application built using Python and Yandex's Text-to-Speech (TTS) API. It allows users to input text and convert it into speech dynamically. The app is designed for ease of use, providing an interface to quickly generate and download audio files in various formats.
