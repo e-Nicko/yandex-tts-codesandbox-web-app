@@ -1,0 +1,22 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+#text-input {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#generate-audio {
+    margin-bottom: 20px;
+}
+
+#audio-player {
+    margin-top: 20px;
+}
+
+.highlight {
+    background-color: yellow;
+}
+

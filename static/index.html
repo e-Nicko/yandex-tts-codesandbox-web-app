@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text-to-Speech API</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css"> 
+</head>
+<body class="bg-gray-100 p-6">
+    <div class="max-w-3xl mx-auto bg-white shadow-lg rounded-lg p-6">
+        <h1 class="text-3xl font-bold text-center text-blue-600 mb-4">Text-to-Speech Generator</h1>
+
+        <label for="text-input" class="block text-lg mb-2 font-semibold">Введите текст для синтеза:</label>
+        <textarea id="text-input" rows="6" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Введите текст здесь...">
+Речевые технологии на базе машинного обучения для создания голосовых помощников, автоматизации колл-центров, контроля качества сервиса и других задач.
+
+Наши технологии лежат в основе голосового помощника Алиса, а теперь адаптированы для вашего бизнеса.
+        
+SpeechKit за доли секунды высокоточно распознаёт речь во всём её многообразии и стилистике. Благодаря этому, голосовые помощники наших клиентов общаются с пользователями легко и без задержек.
+        
+Brand Voice — уникальный голос для вашего бизнеса. Выбирайте версию Premium для создания умного голосового помощника, Self Service, чтобы повысить эффективность массовых коммуникаций, а Call Center — для автоматизации контакт-центра.
+        </textarea>
+
+        <button id="generate-audio" class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500">Сгенерировать аудио</button>
+
+        <audio id="audio-player" controls class="w-full mt-3 mb-6 hidden"></audio>
+        
+        <div id="result-block" class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6 hidden">
+            <div class="column bg-gray-50 p-4 rounded-lg shadow-inner overflow-y-auto max-h-72">
+                <h2 class="text-xl font-semibold">Сгенерированный текст:</h2>
+                <p id="generated-text" class="mt-4 p-2 bg-white rounded-lg border border-gray-200"></p>
+            </div>
+            <div class="column bg-gray-50 p-4 rounded-lg shadow-inner overflow-y-auto max-h-72">
+                <h2 class="text-xl font-semibold">JSON тайминговой разметки:</h2>
+                <pre id="json-timestamps" class="mt-4 p-2 bg-white rounded-lg border border-gray-200 overflow-x-auto"></pre>
+            </div>
+        </div>
+        
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
